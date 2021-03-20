@@ -1,0 +1,145 @@
+
+h2 {
+    margin: 0;
+}
+.separador {
+    margin: 1rem;    
+}
+.servicios {
+    border: 3px solid black;
+    display: grid;
+    /* crea 3 cajas de texto*/
+    grid-template-columns: 50% 25% 25%;
+    /* hace deja a la mitad los elementos debido a que no tiene altura*/
+    grid-template-rows: 50% 50%;
+    /*agregar altura para ver lo que hace grid -template-rows*/
+    /*mostrará 3 cajas en blanco, chequear con inspeccionar de chrome*/
+    height: 5rem;
+}
+
+.servicio {
+    color: white;
+    text-align: center;
+}
+
+.servicio-1 {
+    /*Expanda servicio1 hasta servicio2*/
+    /* column se cuenta de izq a der */
+    /* row de arriba a bajo */
+    background-color: darkviolet;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.servicio-2 {
+    background-color: limegreen;
+}
+.servicio-3 {
+    background-color: teal;
+}
+
+/* ejemplo2 */
+/* Expandir columnas */
+.servicios2 {
+    margin-top: 1rem;
+    border: 3px solid black;
+    display: grid;
+    /* crea 3 cajas de texto*/
+    grid-template-columns: 50% 25% 25%;
+    /* hace deja a la mitad los elementos debido a que no tiene altura*/
+    grid-template-rows: 50% 50%;
+    /*agregar altura para ver lo que hace grid -template-rows*/
+    /*mostrará 3 cajas en blanco, chequear con inspeccionar de chrome*/
+    height: 5rem;
+}
+.servicio2 {  
+    color: white;
+    text-align: center;
+}
+/* expandir column y row */
+.servicio-1-1 {
+    /*Expanda servicio1 hasta servicio2*/
+    background-color: darkviolet;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+/* column se cuenta de izquierda a derecha */
+.servicio-2-1 {
+    background-color: limegreen;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.servicio-3-1 {
+    background-color: teal;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* ejemplo3 */
+/* usando shorthands en grid-column: 1 / 3; grid-row: 1 / 3;*/
+.servicios3 {
+    margin-top: 1rem;
+    border: 3px solid black;
+    display: grid;  
+    grid-template-columns: 50% 25% 25%;   
+    grid-template-rows: 50% 50%;   
+    height: 5rem;
+}
+.servicio3 {  
+    color: white;
+    text-align: center;
+}
+.servicio-1-2 {   
+    background-color: darkviolet;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    
+}
+.servicio-2-2 {
+    background-color: limegreen;
+    grid-column: 2 / 4;       
+}
+.servicio-3-2 {
+    background-color: teal;
+    grid-column: 2 / 4;
+       
+}
+
+/* ejemplo4 */
+
+.servicios4 {
+    margin-top: 1rem;
+    border: 3px solid black;
+    display: grid;  
+    grid-template-columns: 50% 25% 25%;  
+     /*agregando 4 filas  */
+    grid-template-rows: 25% 25% 25% 25%;   
+    height: 8rem;
+}
+.servicio4 {  
+    color: white;
+    text-align: center;
+}
+.servicio-1-3 {   
+    background-color: darkviolet;
+    /* span es el numero de lineas que quiero saltar. no contar el inicio */
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 4;
+    
+}
+.servicio-2-3 {
+    background-color: limegreen;
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;      
+}
+.servicio-3-3 { 
+    background-color: teal;
+    grid-column: 2 / span 2; 
+    grid-row: 3 / span 2;
+       
+}
